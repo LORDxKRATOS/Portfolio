@@ -1,0 +1,684 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.menu{
+    position: relative;
+    left: 150px;
+    top: 5px;
+}
+
+header {
+    background: #121212;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #222328;
+}
+
+.logo {
+    position: relative;
+    right: 150px;
+    font-size: 3em;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.5em;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.hero-section h2{
+    font-size: 50px;
+}
+
+/* Hero section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    /* Adjust for the fixed header */
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    color: #fff;
+}
+
+.gradient-text {
+    position: relative;
+    right: 130px;
+    background: linear-gradient(90deg, #60a5fa, #dc2626);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 200%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.hero-text h2,
+.hero-text p {
+    position: relative;
+    right: 125px;
+    margin: 0.5em 0;
+    line-height: 1.6;
+}
+
+.buttons {
+    margin-top: 2em;
+    text-align: left;
+}
+
+button[type="submit"] {
+    display: inline-block;
+    width: 100%;           /* Make the button take full width if needed, adjust accordingly */
+    padding: 10px 20px;     /* Adjust padding for a balanced look */
+    text-align: center;     /* Horizontal centering of text */
+    font-size: 16px;        /* Adjust the font size */
+    line-height: normal;    /* Reset line height for proper text alignment */
+    background-color: #4CAF50; /* Example background color */
+    color: white;           /* Button text color */
+    border: none;           /* Remove border */
+    border-radius: 5px;     /* Optional: Add rounded corners */
+    cursor: pointer;        /* Pointer cursor on hover */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+    color: white; /* Text color */
+    text-decoration: none;
+    font-size: 1.2em;
+    background-color: #1d1d1d; /* Button background */
+    border: none;
+    border-radius: 5px;
+    overflow: hidden; /* Hide overflow */
+    transition: transform 0.3s ease; /* Transition for scaling effect */
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 0, 255, 0.3), 0 0 30px rgba(0, 255, 255, 0.3);
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.3s ease;
+    animation: glowEdges 2s linear infinite; /* Animation applied */
+}
+
+.btn:hover::before {
+    opacity: 1; /* Make the glow visible on hover */
+}
+
+.btn span {
+    position: relative; /* Position text above the glowing effect */
+    z-index: 1; /* Place it above the glowing effect */
+}
+
+@keyframes glowEdges {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 0, 255, 0.3), 0 0 15px rgba(0, 255, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 0, 255, 0.6), 0 0 40px rgba(0, 255, 255, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 0, 255, 0.3), 0 0 15px rgba(0, 255, 255, 0.3);
+    }
+}
+
+
+.buttons .btn {
+    position: relative;
+    right: 120px;
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    background: linear-gradient(90deg, #60a5fa, #ff0000);
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    border: none;
+    margin: 0 1em 0.5em 0;
+}
+
+.hero-image img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Section styles */
+.section {
+    padding: 4em 0;
+    background-color: #181818;
+    color: #fff;
+    text-align: center;
+}
+
+
+.section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+
+.section p{
+    font-size: 20px;
+    padding-left: 20em;
+    padding-right: 20em;
+    padding-bottom: 10px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em 0;
+}
+
+.about-photo {
+    width: 600px;
+    border-radius: 10px;
+    margin-right: 2em;
+    margin-left: 10em;
+}
+
+.about-text {
+    max-width: 900px;
+    padding-bottom: 4em;
+}
+
+.about-text h2 {
+    margin-bottom: 0.5em;
+}
+
+.about-text p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+    padding-right: 10em ;
+}
+
+/* Contact section */
+#contact {
+    padding: 4em 0;
+    text-align: center;
+    background-color: rgb(18, 18, 18);
+}
+
+.social-links a {
+    text-decoration: none;
+    margin: 0 2px;
+    font-size: 1.2em;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+input[type="email"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #222328;
+    border-radius: 5px;
+    background-color: #18191E;
+    color: #fff;
+}
+
+button {
+    padding: 0.5em 2em;
+    background: linear-gradient(45deg, #1e40af, #991b1b);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5753c9;
+}
+
+/* Skills section */
+.skills-section {
+    padding: 40px 0;
+    background-color: #111;
+    color: white;
+    display: flex;
+}
+
+.skills-nav {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-right: 20px;
+}
+
+.skills-btn {
+    color: #888;
+    font-size: 18px;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    margin-bottom: 10px;
+}
+
+.skills-btn.active,
+.skills-btn:hover {
+    color: #fff;
+}
+
+.content-section {
+    margin-left: 20px;
+    display: none;
+}
+
+.skills-section {
+    padding: 40px 0;
+    background-color: #111;
+    color: white;
+}
+
+.skills-container {
+    display: flex;
+    border: 1px solid #6c63ff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.skills-nav {
+    list-style: none;
+    padding: 20px;
+    background-color: #181818;
+    margin: 0;
+    width: 30%;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+.content-section {
+    display: none; /* Hide all content sections by default */
+    margin-top: 20px;
+}
+
+.content-section.active {
+    display: block; /* Show only the active content section */
+}
+
+
+.skills-nav li {
+    margin-bottom: 10px;
+}
+
+.skills-btn {
+    color: #888;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    border-left: 3px solid transparent;
+    cursor: pointer;
+}
+
+.skills-btn.active {
+    color: #fff;
+    border-left: 3px solid #6c63ff;
+}
+
+.skills-box {
+    flex-grow: 1;
+    padding: 2px 20px 20px 20px;
+    background-color: #121212;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.skills-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-box li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.skills-box ul {
+    list-style-type: disc;
+    /* This ensures bullet points (default is disc) */
+    padding-left: 20px;
+    /* Adds some space to the left of the list */
+}
+
+.content-section p {
+    list-style: disc;
+}
+
+.skills-box li {
+    margin-bottom: 5px;
+    /* Adds spacing between the list items */
+}
+
+.content-section {
+    display: none;
+}
+
+
+header .container {
+    display: flex; /* Align items in a row */
+    justify-content: space-between; /* Push the logo to the left and nav to the right */
+    align-items: center; /* Vertically center the logo and nav items */
+    width: 100%;
+    padding: 10px 20px; /* Adjust padding as necessary */
+}
+
+h1.logo {
+    margin: 0; /* Remove default margin */
+    font-size: 50px; /* Adjust size if needed */
+}
+
+nav ul {
+    list-style: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Align nav items in a row */
+}
+
+nav ul li {
+    margin-left: 20px; /* Add space between nav items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Adjust text color */
+    font-size: 18px; /* Adjust size as needed */
+}
+
+
+
+.content-section.active {
+    display: block;
+}
+
+.skills-btn.active {
+    font-weight: bold;
+    color: white;
+    /* Optional: You can customize this */
+}
+
+footer {
+    text-align: center;
+    padding: 3em 3em 3em 3em;
+    border-top: 2px solid #1A1A1D;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+    overflow: hidden; /* Hide overflow */
+    color: white; /* Text color */
+    text-decoration: none;
+    font-size: 1.2em;
+    background-color: #1d1d1d; /* Button background */
+    border-radius: 5px;
+    border: none;
+}
+
+.btn::before,
+.btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    z-index: 0; /* Place it behind the text */
+    transition: all 0.3s ease;
+}
+
+.btn::before {
+    top: 0;
+    left: -100%; /* Start off-screen */
+    animation: slide-left 2s linear infinite; /* Move from left */
+}
+
+.btn::after {
+    bottom: 0;
+    right: -100%; /* Start off-screen */
+    animation: slide-right 2s linear infinite; /* Move from right */
+}
+
+.btn:hover::before {
+    animation: slide-left 2s linear infinite; /* Keep left animation on hover */
+}
+
+.btn:hover::after {
+    animation: slide-right 2s linear infinite; /* Keep right animation on hover */
+}
+
+.btn span {
+    position: relative; /* Position text above the glowing effect */
+    z-index: 1; /* Place it above the glowing effect */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.btn:hover span {
+    color: #4CAF50; /* Change text color on hover */
+}
+
+@keyframes slide-left {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 50%; /* Move to the middle */
+    }
+    100% {
+        left: 100%; /* Move off to the right */
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        right: -100%;
+    }
+    50% {
+        right: 50%; /* Move to the middle */
+    }
+    100% {
+        right: 100%; /* Move off to the left */
+    }
+}
+
+
+/* Projects section styles */
+.projects-section {
+    padding: 40px 0;
+    background: rgb(18, 18, 18); /* Background color for the section */
+}
+
+.container {
+    max-width: 1200px; /* Ensure content doesn't stretch too wide */
+    margin: auto;
+    padding: 0 20px; /* Add some padding for smaller screens */
+}
+
+
+/* Individual project styles */
+.project {
+    margin-bottom: 30px; /* Space between projects */
+    padding: 20px; /* Padding inside each project card */
+    border-radius: 10px; /* Rounded corners */
+    transition: box-shadow 0.3s; /* Smooth transition for hover effect */
+    background-color: rgb(18, 18, 18); /* Light background for each project */
+}
+
+/* Project image styles */
+.project-image {
+    max-width: 60%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 15px; /* Space below images */
+}
+
+/* Project title styles */
+.project h3 {
+    font-size: 1.5em; /* Title size */
+    margin: 10px 0; /* Space above and below titles */
+    color: white; /* Title color */
+}
+
+/* Project description styles */
+.project p {
+    font-size: 1em; /* Description size */
+    color: white; /* Description color */
+}
+
+/* Button styles */
+.project .btn {
+    display: inline-block; /* Ensure the button is displayed as a block */
+    background: #007bff; /* Button background color */
+    color: black; /* Button text color */
+    padding: 10px 15px; /* Padding inside button */
+    text-decoration: none; /* Remove underline from links */
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background 0.3s; /* Smooth transition for hover effect */
+    margin-top: 10px; /* Space above button */
+}
+
+.project .btn:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+
+/* Hover effect for project cards */
+.project:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .project {
+        padding: 15px; /* Less padding for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.8em; /* Smaller title size */
+    }
+}
+
+.projects-section h2{
+    text-align: center;
+    font-size: 55px;
+    padding-bottom: 10px;
+}
+
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        margin-bottom: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
